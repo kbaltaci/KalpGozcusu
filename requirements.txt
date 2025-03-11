@@ -1,5 +1,3 @@
-Flask
-tensorflow-cpu
-numpy
-pandas
-gunicorn
+Flask==2.3.2
+tensorflow==2.12.0
+numpy==1.23.5
