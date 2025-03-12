@@ -12,15 +12,30 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #8b0000, #ff6347); /* Koyu kırmızıdan açık kırmızıya geçiş */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #4B0082, #8b0000, #ff6347, #ffd700); /* Mor → Kırmızı → Sarı */
+    background-size: 400% 400%;
+    animation: gradientBG 6s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    transition: background 1s ease-in-out;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
 
         h2 {
             text-align: center;
@@ -29,7 +44,7 @@
         }
 
         form {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.5);
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -39,9 +54,10 @@
 
         label {
             display: block;
-            font-size: 14px;
+            font-size: 16px;
             margin-bottom: 5px;
-            color: #555;
+            color: #000000;
+	    font-weight: bold;
         }
 
         input,
@@ -83,7 +99,7 @@
 
         .result {
             text-align: center;
-            font-size: 18px;
+            font-size: 24px;
             margin-top: 20px;
             font-weight: bold;
             color: #2e8b57;
